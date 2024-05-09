@@ -21,24 +21,23 @@ class MyProject extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
-            title: Row(
+            title: const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "TeamFlow",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  'team.flow',
+                  style: TextStyle(fontSize: 20, color: Colors.black),
                 ),
+                Column(
+                  children: [
+                    Icon(
+                      Icons.menu,
+                      color: Colors.black,
+                    ),
+                  ],
+                )
               ],
             ),
-            actions: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.format_line_spacing),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Text("Menu"),
-              ),
-            ],
           ),
           body: SingleChildScrollView(
             child: Column(
@@ -51,13 +50,13 @@ class MyProject extends StatelessWidget {
                     Container(
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Color(0xFFF2F9EB),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Text(
+                      child: const Text(
                         "Get account of \$59",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
@@ -66,14 +65,15 @@ class MyProject extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Manage the team everyone wants to be on",
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
+                      """    Manage the team 
+   everyone wants to
+                be on""",
+                      style:
+                          TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
@@ -82,12 +82,11 @@ class MyProject extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      """Simple platform that lets you master what great 
-                      managers do best, as  develop
-                       trust,colobrate,and drive team 
-                       performance""",
+                      """      Simple platform that lets you master what    
+      great managers do best, as  develop trust,
+      colobrate,and drive team performance""",
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 18,
                       ),
                     ),
                   ],
@@ -98,19 +97,22 @@ class MyProject extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
+                        height: 52,
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Text(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.grey,
+                            )),
+                        child: const Text(
                           "name@yourcompany.com",
                           style: TextStyle(
                             fontSize: 16,
-                            color: Colors.white,
+                            color: Colors.grey,
                           ),
+                          textAlign: TextAlign.center,
                         ),
-
                       ),
                     ),
                   ],
@@ -121,17 +123,19 @@ class MyProject extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
+                        height: 52,
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.blue,
+                          color: Color(0xFF794CFF),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Text(
+                        child: const Text(
                           "Try it free",
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 20,
                             color: Colors.white,
                           ),
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
@@ -152,10 +156,14 @@ class MyProject extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("TRUSTED BY OVER 10.000+ WORLD'S BEST TEAM"),
-                    Image.network(
-                      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_Google_FullColor_3x_830x27.max-600x600.format-webp.webp",
-                      width: 50,
-                      height: 50,
+                    Row(
+                      children: [
+                        Image.network(
+                          "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_Google_FullColor_3x_830x27.max-600x600.format-webp.webp",
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
                     ),
                     SizedBox(width: 10),
                     Image.network(
@@ -181,76 +189,87 @@ class MyProject extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Container(
-                  child: Text(
-                    "Survey your team",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                    textAlign: TextAlign.center,
-                  ),
+                  width: 384,
+                  height: 120,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xFFF6F3FC)),
+                  child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Survey your team",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          "Powerful question that get to the heart\nof how team members really feel",
+                          textAlign: TextAlign.center,
+                        ),
+                      ]),
                 ),
                 SizedBox(height: 20),
-                Container(
-                  child: Text(
-
-                    "Powerful question that get to the heart\nof how team members really feel",
-                    textAlign: TextAlign.center,
-                  ),
-                ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      width: 8,
-                      height: 384,
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                        border: Border.all(
-                          color: Colors.black,
-                          width: 8,
-                        ),
+                      width: 340,
+                      height: 8,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF794CFF),
                       ),
                     ),
                   ],
                 ),
                 SizedBox(height: 20),
                 Container(
-                  child: Text(
-                    "Resolve issues quickly",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  width: 384,
+                  height: 332,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFFF6F3FC),
                   ),
-                ),
-                Container(
-                  child: Text(
-                    "Anonymys messaging that connects managers and employees",
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                SizedBox(height: 20),
-                Container(
-                  child: Text(
-                    "Plan your 1-on-1s",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Container(
-                  child: Text(
-                    "Plan meeting together and give a stake employees and teams",
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                SizedBox(height: 20),
-                Container(
-                  child: Text(
-                    "Track your progress",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Container(
-                  child: Text(
-                    "Easy-to-read eports and sharable results help managers and teams",
-                    textAlign: TextAlign.center,
+                  child: const Padding(
+                    padding: EdgeInsets.all(20),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 15),
+                        Text(
+                          "Resolve issues quickly",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20),
+                        ),
+                        Text(
+                          "Anonymys messaging that connects managers and employees",
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          "Plan your 1-on-1s",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20),
+                          textAlign: TextAlign.center,
+                        ),
+                        Text(
+                          "Plan meeting together and give a stake employees and teams",
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          "Track your progress",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20),
+                          textAlign: TextAlign.center,
+                        ),
+                        Text(
+                          "Easy-to-read eports and sharable results help managers and teams",
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(height: 20),
@@ -261,17 +280,22 @@ class MyProject extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
+                SizedBox(height: 20),
                 Container(
+                  width: 70,
+                  height: 70,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.orange,
+                    color: const Color.fromARGB(255, 218, 213, 213),
                   ),
                   child: Icon(
                     Icons.align_vertical_bottom_sharp,
                     size: 50,
+                    color: Colors.orange,
                   ),
                 ),
+                SizedBox(height: 25),
                 Container(
                   child: Text(
                     "Team Surveys & Reports",
@@ -287,19 +311,21 @@ class MyProject extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Container(
+                  width: 70,
+                  height: 70,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.green[400],
+                    color: const Color.fromARGB(255, 174, 238, 176),
                   ),
                   child: Icon(
                     Icons.menu_book_outlined,
+                    color: Colors.green,
                     size: 50,
                   ),
                 ),
                 Container(
                   child: Text(
-
                     "Collaborative 1:1",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     textAlign: TextAlign.center,
@@ -313,12 +339,15 @@ class MyProject extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Container(
+                  width: 70,
+                  height: 70,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Colors.purple),
+                      color: Color.fromARGB(255, 218, 110, 237)),
                   child: Icon(
                     Icons.school_outlined,
+                    color: Colors.purple,
                     size: 50,
                   ),
                 ),
@@ -337,14 +366,16 @@ class MyProject extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Container(
+                  width: 322,
+                  height: 52,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.purple),
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xFFECE5FF)),
                   child: TextButton(
                     onPressed: () {},
                     child: Text(
                       "View more benefits",
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Color(0xFF7557FF), fontSize: 17),
                     ),
                   ),
                 ),
@@ -369,9 +400,11 @@ class MyProject extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Container(
+                  width: 322,
+                  height: 52,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.purple),
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xFF796EFF)),
                   child: TextButton(
                     onPressed: () {},
                     child: Text(
@@ -391,7 +424,6 @@ class MyProject extends StatelessWidget {
                 SizedBox(height: 20),
                 Container(
                   child: Text(
-
                     "It's amazing what has helped me learn about my team. I don't worry about blindspots anymore, and 1-on-1-s have never been more productive. The team loves it",
                     textAlign: TextAlign.center,
                   ),
@@ -418,134 +450,226 @@ class MyProject extends StatelessWidget {
                     "CS at Google",
                   ),
                 ),
+                SizedBox(height: 30),
                 Column(
                   children: [
                     Container(
-                      color: Colors.blue,
-                      child: Text(
-                        "84% of employees who use trust their direct manager",
-                      ),
-                    ),
-                    Container(
-                      color: Colors.blue,
-                      child: Row(
+                      width: 414,
+                      height: 291,
+                      color: Color(0xFF796EFF),
+                      child: Column(
                         children: [
-                          Container(
-                            color: Colors.blue,
-                            child: Image.network(
-                              "https://news.store.rambler.ru/img/c5e10cd65c94a8c782501e105accb970?img-format=auto&img-1-resize=height:400,fit:max&img-2-filter=sharpen",
-                              width: 50,
-                              height: 50,
+                          const Padding(
+                            padding: EdgeInsets.all(15),
+                            child: Text(
+                              """84% of employees who use
+trust their direct manager""",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 24),
                             ),
                           ),
-                          SizedBox(width: 5),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Get it on"),
-                              Text("Google Play"),
-                            ],
+                          SizedBox(height: 15),
+                          Container(
+                            width: 180,
+                            height: 53,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xFFFFFFFF),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  'assets/images/PlayMarket.png',
+                                  width: 50,
+                                  height: 50,
+                                ),
+                                Image.asset(
+                                  'assets/images/google1.png',
+                                  width: 70,
+                                  height: 50,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 15),
+                          Container(
+                            width: 180,
+                            height: 53,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xFFFFFFFF),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  'assets/images/Apple.png',
+                                  width: 50,
+                                  height: 50,
+                                ),
+                                Image.asset(
+                                  'assets/images/appstore1.png',
+                                  width: 70,
+                                  height: 50,
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ),
+                    SizedBox(height: 50),
                     Container(
-                      color: Colors.blue,
-                      child: Row(
-                        children: [
-                          Container(
-                            child: Image.network(
-                              "https://1000logos.net/wp-content/uploads/2020/08/apple-app-store-logo.jpg",
-                              width: 50,
-                              height: 50,
+                      width: 414,
+                      height: 483,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(1),
+                        color: Color(0xFF1D2830),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(40),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Company",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      Icons.keyboard_arrow_down,
+                                      color: Colors.white,
+                                    ))
+                              ],
                             ),
-                          ),
-                          SizedBox(width: 5),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Download on the"),
-                              Text("App Store"),
-                            ],
-                          ),
-                        ],
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Support",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      Icons.keyboard_arrow_down,
+                                      color: Colors.white,
+                                    ))
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Legal",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      Icons.keyboard_arrow_down,
+                                      color: Colors.white,
+                                    ))
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  "Install App",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 30),
+                            Row(
+                              children: [
+                                Container(
+                                  width: 180,
+                                  height: 53,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Color(0xFFFFFFFF),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        'assets/images/PlayMarket.png',
+                                        width: 50,
+                                        height: 50,
+                                      ),
+                                      Image.asset(
+                                        'assets/images/google1.png',
+                                        width: 70,
+                                        height: 50,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 30),
+                            Row(
+                              children: [
+                                Container(
+                                  width: 180,
+                                  height: 53,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Color(0xFFFFFFFF),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        'assets/images/Apple.png',
+                                        width: 50,
+                                        height: 50,
+                                      ),
+                                      Image.asset(
+                                        'assets/images/appstore1.png',
+                                        width: 70,
+                                        height: 50,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 30),
+                            Container(
+                              width: double.infinity,
+                              height: 2,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: const Color.fromARGB(
+                                        255, 103, 100, 100)),
+                              ),
+                            ),
+                            SizedBox(height: 20),
+                            Row(
+                              children: [
+                                Text(
+                                  '© 2022. All Rights Reserved',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 10),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    Row(
-                      children: [
-                        Text("Company"),
-                        SizedBox(width: 280),
-                        IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.arrow_drop_down_outlined))
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text("Support"),
-                        SizedBox(width: 290),
-                        IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.arrow_drop_down_outlined))
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text("Legal"),
-
-                        SizedBox(width: 300),
-                        IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.arrow_drop_down_outlined))
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text("Install App"),
-                        SizedBox(width: 250),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          child: Image.network(
-                            "https://news.store.rambler.ru/img/c5e10cd65c94a8c782501e105accb970?img-format=auto&img-1-resize=height:400,fit:max&img-2-filter=sharpen",
-                            width: 50,
-                            height: 50,
-                          ),
-                        ),
-                        SizedBox(width: 5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("Get it on"),
-                            Text("Google Play"),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          child: Image.network(
-                            "https://1000logos.net/wp-content/uploads/2020/08/apple-app-store-logo.jpg",
-                            width: 50,
-                            height: 50,
-                          ),
-                        ),
-                        SizedBox(width: 5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("Download on the"),
-                            Text("App Store"),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [Text("©-All rights reserved")],
-                    )
                   ],
                 ),
               ],
